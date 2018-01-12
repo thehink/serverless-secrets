@@ -144,7 +144,7 @@ class ServerlessSecrets {
     if (this.options.file) {
       value = fs.readFileSync(this.options.file, 'utf8')
     } else if (this.options.text) {
-      value = this.options.text
+      value = this.options.text.toString()
     } else {
       throw new Error('--file or --text is required')
     }
